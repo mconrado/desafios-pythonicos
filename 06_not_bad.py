@@ -25,7 +25,7 @@ def not_bad(s):
 
     return s
    """ 
-   
+   #SEGUNDA SOLUÇÃO USANDO REGEX INCLUINDO UM NOVO TESTE
    return re.sub('not( [a-zA-Z]*)? bad', 'good', s)    
    
    
