@@ -13,17 +13,24 @@ a-frente + b-frente + a-trás + b-trás
 def front_back(stringOne, stringTwo):
     # +++ SUA SOLUÇÃO +++
 
-    indiceOne = int(len(stringOne) / 2)
-    indiceTwo = int(len(stringTwo) / 2)
+    passedStrings = [stringOne, stringTwo]
+    finalFrontStr = ''
+    finalBackStr = ''
 
-    if len(stringOne) % 2 != 0:
-        indiceOne += 1
-    
-    
-    if len(stringTwo) % 2 != 0:
-        indiceTwo += 1
+    for passedStr in passedStrings :
 
-    return stringOne[:indiceOne] + stringTwo[:indiceTwo] + stringOne.replace(stringOne[:indiceOne], '') + stringTwo.replace(stringTwo[:indiceTwo], '')
+        indexFront = int(len(passedStr) / 2)
+
+        if len(passedStr) % 2 != 0:
+            indexFront += 1
+    
+        finalFrontStr += passedStr[:indexFront]   
+        finalBackStr += passedStr.replace(passedStr[:indexFront], '')
+    
+    return finalFrontStr + finalBackStr
+
+
+
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
