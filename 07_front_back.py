@@ -10,6 +10,8 @@ Exemplo: 'abcde', a metade da frente é 'abc' e a de trás é 'de'.
 Finalmente, dadas duas strings a e b, retorne uma string na forma:
 a-frente + b-frente + a-trás + b-trás
 """
+import math
+
 def front_back(stringOne, stringTwo):
     # +++ SUA SOLUÇÃO +++
 
@@ -19,7 +21,7 @@ def front_back(stringOne, stringTwo):
 
     for passedStr in passedStrings :
 
-        indexFront = int(len(passedStr) / 2)
+        indexFront = math.ceil(int(len(passedStr) / 2))
 
         if len(passedStr) % 2 != 0:
             indexFront += 1
@@ -27,7 +29,7 @@ def front_back(stringOne, stringTwo):
         finalFrontStr += passedStr[:indexFront]   
         finalBackStr += passedStr.replace(passedStr[:indexFront], '')
     
-    return finalFrontStr + finalBackStr
+    return "".join((finalFrontStr, finalBackStr))
 
 
 
