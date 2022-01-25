@@ -11,7 +11,7 @@ PS: Python não possui o operador ++, porém += funciona.
 def match_ends(words):
     # +++ SUA SOLUÇÃO +++
 
-    return sum( 1 for founded in words  if len(founded) >= 2 and founded[0] == founded[-1] )
+    return sum( 1 for founded in words if len(founded) >= 2 and founded[0] == founded[-1] )
 
 
 
