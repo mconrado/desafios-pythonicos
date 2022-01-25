@@ -10,19 +10,10 @@ PS: Python não possui o operador ++, porém += funciona.
 
 def match_ends(words):
     # +++ SUA SOLUÇÃO +++
-    countPassedWords = 0
 
-    for passedWord in words :
+    return sum( 1 for founded in words  if len(founded) >= 2 and founded[0] == founded[-1] )
 
-        requiredLen = len(passedWord) >= 2
-        
-        if requiredLen : 
-            firstLastAreSame = passedWord[0] == passedWord[-1]
 
-            if firstLastAreSame and requiredLen :
-                countPassedWords += 1
-
-    return countPassedWords
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
