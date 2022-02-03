@@ -14,9 +14,8 @@ antes de combina-las.
 def front_x(words):
     # +++ SUA SOLUÇÃO +++
     words.sort()
-    xlist = [x for x in words if x.startswith('x')]
-    words = [w for w in words if w not in xlist]
-    return xlist + words
+    words.sort(key=lambda x:x.startswith('x'), reverse=True)
+    return words
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
