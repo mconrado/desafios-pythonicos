@@ -53,10 +53,11 @@ e conferindo cada etapa do seu progresso.
 
 import sys
 
-
 # +++ SUA SOLUÇÃO +++
 # Defina as funções print_words(filename) e print_top(filename).
-def print_words(text):
+
+def text_to_list(text):
+
     f = open(f"{text}","r")
     lines = f.readlines()
     words = []
@@ -65,11 +66,29 @@ def print_words(text):
         line = line.replace("\n", "")
         
         words = words + (line.lower().split())
-
-    findedWordsUnique = sorted(set(words))
     
-    for word in findedWordsUnique :
-        print(word + ' ' + str(words.count(word)))
+    return words
+    
+def words_occurrences_to_list(wordsList):
+
+    occurrences = []
+    singleWordsFounded = set(wordsList)
+    
+    for word in singleWordsFounded :
+        occurrences.append((word, str(wordsList.count(word))))
+
+    return occurrences
+
+    
+def print_words(text):
+    
+    wordsList = text_to_list(text)
+    wordsOccurrences = words_occurrences_to_list(wordsList)
+    wordsOccurrences.sort()
+
+    for ocurrence in wordsOccurrences:
+        print(" ".join(ocurrence))
+
 
 
 # A função abaixo chama print_words() ou print_top() de acordo com os
