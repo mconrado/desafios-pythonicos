@@ -91,6 +91,17 @@ def print_words(text):
 
 
 
+def print_top(text):
+    
+    wordsList = text_to_list(text)
+    wordsOccurrences = words_occurrences_to_list(wordsList)
+    wordsOccurrences.sort(key=lambda x: x[1], reverse=True)
+    wordsOccurrences = wordsOccurrences[0:20]
+
+    for ocurrence in wordsOccurrences:
+        print(" ".join(ocurrence))
+
+
 # A função abaixo chama print_words() ou print_top() de acordo com os
 # parêtros do programa.
 def main():
