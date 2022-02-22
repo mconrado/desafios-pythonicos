@@ -58,14 +58,16 @@ import sys
 
 def text_to_list(text):
 
-    f = open(f"{text}","r")
-    lines = f.readlines()
     words = []
 
-    for line in lines :
-        line = line.replace("\n", "")
+    with open(f"{text}","r") as f:
+    
+        lines = f.readlines()
+
+        for line in lines :
+            line = line.replace("\n", "")
         
-        words = words + (line.lower().split())
+            words = words + line.lower().split()
     
     return words
     
