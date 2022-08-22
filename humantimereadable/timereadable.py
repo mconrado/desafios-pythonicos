@@ -11,13 +11,11 @@ funcao(86400) retorna 24:00:00
 
 
 def make_readable(seconds):
-    hours = seconds // 60 // 60
-    rest_seconds = seconds - (hours * 60 * 60)
+    hours = seconds // 3600
+    rest_seconds = seconds - (hours * 3600)
 
     minutes = rest_seconds // 60
-    rest_seconds = rest_seconds - (minutes * 60)
-
-    seconds = rest_seconds
+    seconds = rest_seconds - (minutes * 60)
 
     return "{:02d}:{:02d}:{:02d}".format(hours, minutes, seconds)
 
