@@ -14,6 +14,7 @@ Você também terá que pensar em:
 * Que 'valor' as células fora da área do Jogo terão. Ou o Jogo não terá limite de área?
 
 [Jogo da vida na Wikipedia](https://pt.wikipedia.org/wiki/Jogo_da_vida)
+
 [Exemplo de Simulador](http://cauequeiroz.com.br/game-of-life/)
 
 
