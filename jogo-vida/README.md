@@ -17,5 +17,11 @@ Você também terá que pensar em:
 
 [Exemplo de Simulador](http://cauequeiroz.com.br/game-of-life/)
 
+Rodando o simulador no terminal:
+
+```
+python simulador.py
+```
+
 
 
